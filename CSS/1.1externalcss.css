@@ -1,0 +1,19 @@
+#p1 {
+    background-color: lightblue;
+}
+#p2 {
+    background-color: green;
+}
+#p3 {
+    background-color: grey;
+}
+#p4 {
+    background-color: red;
+}
+
+.odd {
+    color: black;
+}
+.even {
+    color: white;
+}
