@@ -2,8 +2,11 @@ h1{
     font-family: 'Courier New', Courier, monospace;
 }
 #p1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
 }
 #p2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
