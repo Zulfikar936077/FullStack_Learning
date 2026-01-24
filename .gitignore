@@ -1,0 +1,27 @@
+# Large media files (uncomment if you don't want to track these)
+# *.mp3
+# *.mp4
+# *.avi
+# *.mov
+# *.wmv
+
+# Large image files
+# *.psd
+# *.ai
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.log
+*.cache
