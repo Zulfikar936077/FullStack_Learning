@@ -1,0 +1,65 @@
+#div1{
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+#span1{
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    display:block;
+    /*display:in case of span width and height will be applied if the display is block*/
+}
+#div2{
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    display: inline;
+}
+#span2{
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    display: inline;
+}
+#div3{
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+#span3{
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+#div4{
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    display: none;
+    /*display: none is used to hide the element completely. It will not take up any space.*/
+}
+#span4{
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+#div5{
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    visibility: hidden;
+}
+#span5{
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    display: inline-block;  /*inline-block is used to show the element as inline but it will take up the space.*/
+    visibility: visible;
+    /*visibility: visible is used to show the element. It will take up the space.*/
+}
