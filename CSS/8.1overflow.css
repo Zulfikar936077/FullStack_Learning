@@ -1,0 +1,28 @@
+#box1{
+    border: 2px solid black;
+    height: 15px;
+    overflow: visible;
+}
+#box2{
+    border: 2px solid black;
+    height: 15px;
+    overflow: hidden;
+}
+#box3{
+    border: 2px solid black;
+    height: 15px;
+    overflow: clip;
+    overflow-clip-margin: 13px; 
+    /*Clip overflow is more like hidden overflow. But with we can control we want the overflow to be visible or hidden. */
+}
+#box4{
+    border: 2px solid black;
+    height: 45px;
+    overflow: scroll;
+    /*Scroll overflow is more like scroll overflow. But with we can control we want the overflow to be visible or hidden. */
+}
+#box5{
+    border: 2px solid black;
+    height: 15px;
+    overflow: auto;
+    /*Auto overflow only displays the overflow when the content is too large to fit in the box. */
