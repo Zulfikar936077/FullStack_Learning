@@ -1,0 +1,14 @@
+h1{
+    border-style: solid;
+    border-width: 3px;
+    border-color: hsl(33, 100%, 88%);
+    border-radius: 10px;
+}
+
+p{
+    border-bottom: 2px solid tomato;
+    border-left: 2px solid hsl(88, 100%, 64%);
+    border-right: 2px solid hsl(244, 100%, 64%);
+    border-top: 2px solid hsl(337, 100%, 64%);
+    border-radius: 10px;
+}

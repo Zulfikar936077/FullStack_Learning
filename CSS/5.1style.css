@@ -1,0 +1,9 @@
+h1{
+    text-shadow: 3px 3px 10px tomato, -5px -5px 10px hsl(150, 100%, 64%);
+}
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: rgba(234, 234, 234);
+    box-shadow: 3px 3px 10px tomato;
+}
