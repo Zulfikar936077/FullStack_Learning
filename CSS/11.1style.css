@@ -1,0 +1,55 @@
+#box1{
+    background-color: lightblue;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 100px;
+    left: 0px;
+}
+#box2{
+    background-color: lightgreen;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 100px;
+    right: 0px;
+}
+#box3{
+    background-color: lightcoral;
+    height: 200px;
+    width: 200px;
+    position: relative; 
+    /*If the position is changed to relative then the parent element will be placed after the paragraphs*/
+    top: 50px;
+    left: 50px;
+}
+#box4{
+    background-color: lightyellow;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+#box5{
+    background-color: lightcoral;
+    height: 200px;
+    width: 200px;
+    position: fixed; 
+    left: 50px;
+    top: 0px;
+}
+#box6{
+    background-color: lightyellow;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+#box7{
+    background-color: tomato;
+    height: 50px;
+    width: 50px;
+    position: static;
+}

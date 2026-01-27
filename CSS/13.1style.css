@@ -1,0 +1,15 @@
+#container{
+border: 2px solid black;
+}
+#container > p{
+    background-color: lightblue;
+}
+/*child selector is the child of the parent element*/
+/*diff. between child and descendent is that all children are descendants but all descendants are not children*/
+
+#container + p{
+    background-color: lightgreen;
+} /*adjacent sibling is the next sibling of the parent element*/
+#p4 ~ p{
+    background-color: lightcoral;
+} /*general siblings are all the siblings of the parent element*/

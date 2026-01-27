@@ -1,0 +1,7 @@
+body{
+    background-image: url('image/dog.jpg');
+    background-repeat: no-repeat; /*no-repeat: the image will not repeat, repeat: the image will repeat, repeat-x: the image will repeat horizontally, repeat-y: the image will repeat vertically*/
+    background-position: center; /*center: the image will be centered, top: the image will be at the top, bottom: the image will be at the bottom, left: the image will be at the left, right: the image will be at the right*/
+    background-attachment: fixed; /*fixed: the image will be fixed, scroll: the image will scroll*/
+    background-size: cover; /*cover: the image will cover the entire background, contain: the image will be contained in the background*/
+}

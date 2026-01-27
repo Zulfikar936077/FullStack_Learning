@@ -1,0 +1,32 @@
+a:link{
+    color: rgba(0, 0, 0, 0.651);
+}
+a:hover{
+    color: rgba(255, 99, 71, 0.623);
+    font-size: 1.1em;
+}
+a:active{
+    color: rgba(0, 128, 0, 0.712);
+    font-size: 1.1em;
+}
+a:visited{
+    color: #808080;
+    font-size: 1.1em;
+}
+li:not(:hover){
+    background-color: #808080;
+}
+li:hover{
+    background-color: yellowgreen;
+}
+li:nth-child(even){
+    background-color: blanchedalmond;
+}
+#hover p{
+    background-color: lightgrey;
+    padding: 10px;
+    display: none;
+}
+#hover:hover p{
+    display: block;
+}

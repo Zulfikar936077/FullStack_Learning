@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    /* This is to include the padding and border in the width and height */
+}
+.container{
+    background-color: lightblue;
+    height: 100vh; /* viewport height */
+}
+.box{
+    background-color: lightgreen;
+    border: 2px solid black;
+    padding: 10px;
+    height: auto;
+    width: 200px;
+    float: left;
+
+    max-width: 50%;
+}

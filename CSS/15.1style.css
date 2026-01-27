@@ -1,0 +1,27 @@
+h1::first-letter {
+    font-size: 200%;
+    font-style: italic;
+}
+p::first-line {
+    background-color: hsla(60, 100%, 50%, 0.473);
+}
+p::selection {
+    color: white;
+    background-color: black;
+}
+
+#fruit li::marker {
+    content: "🍃";
+    color: tomato;
+    font-size: 1.1em;
+}
+
+#apple::after {
+    content: " 🍎"; /*These icons are called Unicode emojis. The shortcut to bring those is Win+ .*/
+}
+#banana::after {
+    content: " 🍌";
+}
+#cherry::after {
+    content: " 🍒";
+}
