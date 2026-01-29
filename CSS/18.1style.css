@@ -1,0 +1,56 @@
+body{
+    margin: 0;  /* removes default body margin */
+}
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1{
+    text-align: center;
+}
+/*Vertical Navigation Bar*/
+.navigationbar ul{
+    list-style-type: none; /* removes bullet points */
+    margin: 0;   /* removes default ul margin (this was causing the gap!) */
+    padding: 0;
+}
+.navigationbar li{
+    background-color: hsl(195, 53%, 79%);
+    padding: 0px;
+    margin: 0px;
+}
+.navigationbar a{
+    color: lightcoral;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navigationbar li:hover{
+    background-color: hsl(195, 53%, 50%);
+}
+/*Horizontal Navigation Bar*/
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+}
+.navbar li{
+    flex: 1;  /* each li grows equally to fill the full width */
+    background-color: hsl(195, 53%, 79%);
+    padding: 0;
+    margin: 0;
+}
+.navbar a{
+    color: lightcoral;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+.navbar li:hover{
+    background-color: hsl(195, 53%, 50%);
+}
