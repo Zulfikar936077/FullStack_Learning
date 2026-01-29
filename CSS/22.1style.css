@@ -1,0 +1,81 @@
+#container1{
+    display: flex;
+    flex-direction: row-reverse; 
+    /*flex-direction: row-reverse is used to display the boxes in a row in reverse order 
+    flex-direction: column is used to display the boxes in a column */
+    justify-content: flex-end;
+    /*justify-content's other options are: flex-start, center, space-between, space-around, space-evenly*/
+    height: 50vh;
+    border: 2px solid black;
+    align-items: flex-start;
+    /*align-items's other options are: flex-start, center, flex-end, space-between, space-around, space-evenly*/
+}
+.box{
+    height: 150px;
+    width: 150px;
+    font-size: 2em;
+    display: flex; /* This is used to display the box as a flex container */    
+    justify-content: center; /* This is used to center the content of the box */
+    align-items: center; /* This is used to center the content of the box */
+    border-radius: 10px; /* This is used to round the corners of the box */
+}
+#box1{
+    background-color: hsla(195, 89%, 19%, 0.582);
+    align-self: center;
+    /*align-self is used to align the box to the center of the container*/
+    /*align-self other options are: flex-start, center, flex-end, space-between, space-around, space-evenly*/
+    order: 1;
+    /*order is used to change the order of the boxes*/
+}
+#box2{
+    background-color: hsla(69, 90%, 19%, 0.582);
+    align-self: flex-end;
+    order: -2;
+}
+#box3{
+    background-color: hsla(258, 90%, 19%, 0.582);
+    align-self: flex-start;
+}
+#box4{
+    background-color: hsla(323, 90%, 19%, 0.582);
+    align-self: flex-end;
+}
+#container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    border: 2px solid black;
+    align-items: left;
+    flex-wrap: wrap;
+    /*flex-wrap: wrap is used to wrap the boxes to the next line when the width is not enough*/
+    /*flex-wrap other options are: nowrap, wrap-reverse*/
+    column-gap: 10px;
+    /*column-gap is used to add space between the columns*/
+    row-gap: 10px;
+    /*row-gap is used to add space between the rows*/
+}
+#box5{
+    background-color: hsla(195, 89%, 19%, 0.582);
+}
+#box6{
+    background-color: hsla(69, 90%, 19%, 0.582);
+}
+#box7{
+    background-color: hsla(258, 90%, 19%, 0.582);
+}
+#box8{
+    background-color: hsla(323, 90%, 19%, 0.582);
+}
+#box9{
+    background-color: hsla(195, 89%, 19%, 0.582);
+}
+#box10{
+    background-color: hsla(69, 90%, 19%, 0.582);
+}
+#box11{
+    background-color: hsla(258, 90%, 19%, 0.582);
+}
+#box12{
+    background-color: hsla(323, 90%, 19%, 0.582);
+}
