@@ -1,0 +1,32 @@
+.dropdown{
+    display: inline-block; /*This is used to display the dropdown as inline block*/
+}
+.dropdown button{
+    background-color: hsl(195, 53%, 79%);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown a{
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+.dropdown-content{
+    position: absolute;
+    background-color: hsl(195, 53%, 50%);
+    max-width: 100px;
+    box-shadow: 2px 2px 5px hsl(0, 0%, 0%, 0.8); /*This is used to add a shadow to the dropdown content*/
+    display: none; /*This is used to hide the dropdown content*/
+}
+.dropdown:hover .dropdown-content{
+    display: block; 
+} /*This is used to show the dropdown content when the button is hovered*/
+.dropdown:hover button{
+    background-color: hsl(195, 53%, 50%);
+} /*This is used to change the background color of the button when the dropdown content is hovered*/
+.dropdown a:hover{
+    background-color: hsl(195, 53%, 60%);
+} /*This is used to change the background color of the dropdown content when the dropdown content is hovered*/
