@@ -1,0 +1,80 @@
+#box1{
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center; /* This is used to center the content of the box horizontally */
+    align-items: center; /* This is used to center the content of the box vertically */
+    font-size: 6em;
+    background-color: hsl(9, 98%, 22%);
+    animation: slideLeft; /* This is used to animate the box */
+    animation-duration: 5s; /* This is used to set the duration of the animation */
+    animation-iteration-count: infinite; /* This is used to repeat the animation infinite times */
+    animation-direction: alternate; /* This is used to make the animation alternate between forward and backward */
+    animation-timing-function: ease-in-out; /* This is used to make the animation ease in and out */
+}
+@keyframes slideLeft {
+    from {
+        transform: translateX(-100%);
+    }
+}
+@keyframes slideRight {
+to {
+        transform: translateX(150%);
+    }
+}
+@keyframes slideUp {
+    from {
+            transform: translateY(150%);
+        }
+    }
+@keyframes slideDown {
+        to {
+                transform: translateY(150%);
+            }
+        }
+@keyframes rotate {
+           100% {
+                transform: rotateZ(360deg); /* This is used to rotate the box on the y-axis by 360 degrees */
+            }
+            }
+@keyframes scale {
+    100% {
+        transform: scale(2,0.5); /* This is used to scale the box by 2 times on the x-axis and 0.5 times on the y-axis */
+    }
+}
+@keyframes opacity {
+    100% {
+        opacity: 0; /* This is used to make the box fully invisible */
+    }
+}
+@keyframes colorChange {
+    0% {background-color: hsl(9, 98%, 22%); /* This is used to change the color of the box to hsl(9, 98%, 22%) */
+        }
+    50% {
+        background-color: hsl(200, 98%, 22%); /* This is used to change the color of the box to hsl(200, 98%, 22%) */
+    }
+    100% {
+        background-color: hsl(147, 98%, 22%); /* This is used to change the color of the box to hsl(9, 98%, 22%) */
+    }
+}
+@keyframes glow {
+    100% {
+        box-shadow: 0 0 10px 10px hsl(147, 98%, 22%); /* This is used to add a glow to the box */
+    }
+}
+
+/*@keyframes is used to define the animation*/
+/*from is used to set the starting point of the animation*/
+/*to is used to set the ending point of the animation*/
+/*transform is used to transform the element*/
+/*translateX is used to move the element to the right*/
+/*translateY is used to move the element down*/
+/*translateZ is used to move the element forward*/
+/*rotate is used to rotate the element*/
+/*scale is used to scale the element*/
+/*skew is used to skew the element*/
+/*rotateX is used to rotate the element on the x-axis*/
+/*rotateY is used to rotate the element on the y-axis*/
+/*rotateZ is used to rotate the element on the z-axis*/
+/*rotate3d is used to rotate the element on the x-axis, y-axis and z-axis*/
