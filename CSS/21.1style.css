@@ -1,0 +1,18 @@
+.icons{
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+}
+.fa-sharp-duotone.fa-solid.fa-house.fa-beat.icon-home.fa-5x{
+    color: hsla(0, 0%, 13%, 0.548);
+}
+.fa-brands.fa-twitter.fa-5x{
+    color: hsla(0, 0%, 13%, 0.548);
+}
+.fa-brands.fa-facebook.fa-5x{
+    color: hsla(0, 0%, 13%, 0.548);
+}
+.fa-brands.fa-instagram.fa-5x{
+    color: hsla(0, 0%, 13%, 0.548);
+}
