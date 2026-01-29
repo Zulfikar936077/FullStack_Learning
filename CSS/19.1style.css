@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    /* means all the elements.
+    box-sizing is used so that we don't have to think about accommodating the columns within the same horizontal space.*/
+}
+
+body{
+    margin: 0;
+    padding: 0; /* removes default body margin and padding */
+}
+header{
+    background-color: hsl(195, 53%, 79%);
+    text-align: center;
+    padding: 15px;
+}
+.navbar{
+    background-color: hsla(219, 53%, 79%, 0.507);
+    height: 30px;
+}
+aside{
+    width: 20%;
+    float: left;
+    text-align: left;
+    padding: 10px;
+}
+section{
+    width: 40%;
+    float: left;
+    text-align: left;
+    padding: 10px;
+}
+article{
+    width: 40%;
+    float: left;
+    text-align: left;
+    padding: 10px;
+}
+footer{
+    display: block; /* display: block is used to display the footer as a block element */
+    clear: both; /* clear: both is used to clear the float of the previous elements */
+    text-align: center;
+    padding: 15px;
+    background-color: hsl(195, 53%, 79%);  
+}
+@media screen and (max-width: 600px) {
+    aside, section, article {
+        width: 100%;
+    }
+} /*This is used to make the columns stack on top of each other when the screen is less than 600px*/
