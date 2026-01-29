@@ -15,8 +15,8 @@
     width: 150px;
     font-size: 2em;
     display: flex; /* This is used to display the box as a flex container */    
-    justify-content: center; /* This is used to center the content of the box */
-    align-items: center; /* This is used to center the content of the box */
+    justify-content: center; /* This is used to center the content of the box horizontally */
+    align-items: center; /* This is used to center the content of the box vertically */
     border-radius: 10px; /* This is used to round the corners of the box */
 }
 #box1{

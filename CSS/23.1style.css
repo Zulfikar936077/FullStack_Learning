@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#box1{
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center; /* This is used to center the content of the box horizontally */
+    align-items: center; /* This is used to center the content of the box vertically */
+    font-size: 2em;
+    background-color: hsl(9, 98%, 22%);
+    transform: translateX(100px); /* This is used to move the box to the right by 100px */
+    transform: translateY(10px); /* This is used to move the box down by 100px */
+}
+#box2{
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center; /* This is used to center the content of the box horizontally */
+    align-items: center; /* This is used to center the content of the box vertically */
+    font-size: 2em;
+    background-color: hsla(150, 95%, 15%, 0.795);
+    transform: translate(100px, 10px); /* This is used to move the box to the right by 100px and down by 10px */
+}
+#box3{
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center; /* This is used to center the content of the box horizontally */
+    align-items: center; /* This is used to center the content of the box vertically */
+    font-size: 2em;
+    background-color: hsla(200, 95%, 15%, 0.795);
+    transform: rotate(45deg); /* This is used to rotate the box by 45 degrees */
+}
+#box4{
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center; /* This is used to center the content of the box horizontally */
+    align-items: center; /* This is used to center the content of the box vertically */
+    font-size: 2em;
+    background-color: hsla(250, 95%, 15%, 0.795);
+    transform: rotate(135deg) scale(0.5); /* This is used to rotate the box by 135 degrees and then scale the box by 0.5 times */
+}
