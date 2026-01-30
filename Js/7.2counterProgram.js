@@ -7,11 +7,11 @@ const countLabel = document.getElementById("countLabel");
 let count = 0;
 
 iBtn.onclick = function() {
-    count++;
+    count+=5;
     countLabel.textContent = count;
 }
 dBtn.onclick = function() {
-    count--;
+    count-=3;
     countLabel.textContent = count;
 }
 rBtn.onclick = function() {
