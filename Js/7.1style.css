@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#countLabel{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+}
+#btnContainer{
+    display: flex;
+    justify-content: center; /* This is used to center the buttons horizontally */
+    align-items: center; /* This is used to center the buttons vertically */
+}
+.btn{
+    margin: 1px;
+    padding: 10px 20px;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.664);
+    border: 2px solid hsla(0, 29%, 11%, 0.644);
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: hsla(0, 0%, 54%, 0.582);
+    transition: background-color 0.2s; /* This is used to transition the background color of the button */
+}
+.btn:hover{
+    background-color: hsla(0, 0%, 15%, 0.582);
+}
+
+
