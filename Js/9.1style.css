@@ -1,0 +1,22 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    text-align: center;
+}
+#myButton{
+    font-size: 2em;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: tomato;
+    color: white;
+    cursor: pointer;
+    border: none;
+    display: block;
+    margin: 20px auto;
+    }
+#myButton:hover{
+    background-color: hsla(0, 0%, 15%, 0.582);
+}
+
+#myLabel{
+    font-size: 2em;
+}
