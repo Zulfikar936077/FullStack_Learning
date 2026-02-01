@@ -1,16 +1,18 @@
-
 /*
 The checked property is used to check if a checkbox is checked.
 The checked property is used to check if a radio button is checked.
-The checked property is used to check if a radio button is checked.
 */
-const myCheckbox = document.getElementById("myCheckbox");
-const visaBtn = document.getElementById("visaBtn");
-const mastercardBtn = document.getElementById("mastercardBtn");
-const paypalBtn = document.getElementById("paypalBtn");
-const subResult = document.getElementById("subResult");
-const paymentResult = document.getElementById("paymentResult");
-const mySubmit = document.getElementById("myButton"); // Get the submit button element
+
+// Wait for DOM to be fully loaded before accessing elements
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all HTML elements by their IDs
+    const myCheckbox = document.getElementById("myCheckbox");
+    const visaBtn = document.getElementById("visaBtn");
+    const mastercardBtn = document.getElementById("mastercardBtn");
+    const paypalBtn = document.getElementById("paypalBtn");
+    const subResult = document.getElementById("subResult");
+    const paymentResult = document.getElementById("paymentResult");
+    const mySubmit = document.getElementById("myButton"); // Get the submit button element
 
 mySubmit.onclick = function() {
     if(myCheckbox.checked){
