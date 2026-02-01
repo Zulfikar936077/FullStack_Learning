@@ -1,0 +1,25 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+
+}
+
+#myButton{
+    font-size: 1em;
+    background-color: hsla(60, 18%, 67%, 0.709);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    /* Transition property - makes size/color changes smooth */
+    /* Syntax: transition: property duration timing-function */
+    /* property: what to animate (transform, background-color, etc.) */
+    /* duration: how long the animation takes (0.3s = 0.3 seconds) */
+    /* timing-function: easing type (ease, ease-in, ease-out, ease-in-out, linear) */
+    transition: transform 0.3s ease;  /* Smoothly animates transform changes over 0.3 seconds */
+}
+#myButton:hover{
+    background-color: hsla(60, 9%, 40%, 0.645);
+    color: white;
+    transform: scale(1.1);
+}

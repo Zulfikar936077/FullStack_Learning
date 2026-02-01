@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checked Property</title>
+        <link rel="stylesheet" href="11.1style.css">
+    </head>
+    <body>
+        <input type="checkbox" id="myCheckbox" checked>
+        <label for="myCheckbox">Subscribe</label><br><br>
+        <input type="radio" id="visaBtn" name="payment"> <!--radio button should share the same name to be considered as a group-->
+        <label for="visaBtn">Visa</label><br>
+        <input type="radio" id="mastercardBtn" name="payment">
+        <label for="mastercardBtn">Mastercard</label><br>
+        <input type="radio" id="paypalBtn" name="payment">
+        <label for="paypalBtn">Paypal</label><br><br>
+        <button id="myButton">Submit</button><br><br>
+        <p id="subResult"></p>
+        <p id="paymentResult"></p>
+        
+        <script src="11.2checkedProperty.js"></script>
+    </body>
+</html>
