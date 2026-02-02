@@ -87,6 +87,11 @@ header img{
     border-radius: 1em; /*This is a CSS property that is used to set the border radius of the image.*/
     object-fit: cover; /*Scales the image to fill the container while maintaining aspect ratio, cropping excess parts if necessary to prevent distortion.*/
     object-position: bottom; /*Aligns the image to the bottom of the container, ensuring the bottom portion is visible when cropping occurs (useful for portraits to keep faces visible).*/
+   
+}
+header img:hover{
+    transition: transform 0.3s ease; /*Smooth transition effect for image scaling.*/
+    transform: scale(1.1); /*Scales the image to 105% of its original size when hovered over.*/
 }
 .text-container{
     flex: 0 1 34em; /*Shorthand for flex-grow: 0 (won't grow), flex-shrink: 1 (can shrink), flex-basis: 34em (initial size). Sets the text container to start at 34em width, can shrink if needed, but won't grow beyond that.*/
@@ -138,11 +143,15 @@ ul li{
 }
 .cta-button:hover{
     background-color: var(--secondary-color); /*This is a CSS property that is used to set the background color of the button when the user hovers over it.*/
+    transition: background-color 0.3s ease; /*Smooth color transition on hover for better user experience.*/
+    transform: scale(1.1); /*Scales the button to 105% of its original size when hovered over.*/
 }
 
 .cta-button i{
     margin-right: 0.4em; /*Reduced spacing between the icon and the text for a more compact button.*/
     font-size: 0.95em; /*Slightly smaller icon size to match the reduced button size.*/
+    transition: background-color 0.3s ease; /*Smooth color transition on hover for better user experience.*/
+    transform: scale(1.1); /*Scales the button to 105% of its original size when hovered over.*/
 }
 section{
     padding: 3em min(2em, 15%); /*top right bottom left*/
