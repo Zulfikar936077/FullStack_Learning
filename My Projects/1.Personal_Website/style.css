@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 nav{
-    margin: 1em auto 3em auto; /*top right bottom left*/
+    margin: 1em auto 1.5em auto; /* less space below nav before header */
     width: min(1000px, 100%); /*This is a CSS function that is used to set the width of the nav element to the minimum of 1000px or 100% of the parent element.*/
 }
 
@@ -67,7 +67,7 @@ nav a:hover{
  
 header, section{ 
     /*This is a CSS selector that is used to select the header and section elements.*/
-    margin: 2em auto; /*top right bottom left*/
+    margin: 1em auto; /* top/bottom: less gap between sections; auto: center horizontally */
     width: min(75em, 100%); /*This is a CSS function that is used to set the width of the header and section elements to the minimum of 75em or 100% of the parent element.*/
     background: #f8f9fa; /*Clean, modern soft gray background that's professional and provides excellent contrast with text while being easier on the eyes than pure white.*/
     padding: min(2em, 15%); /*top right bottom left*/
@@ -183,4 +183,80 @@ section img{
     border-radius: 1em; /*This is a CSS property that is used to set the border radius of the image.*/
     object-fit: cover; /*Scales the image to fill the container while maintaining aspect ratio, cropping excess parts if necessary to prevent distortion.*/
     object-position: center; /*Centers the image within the container, ensuring the center portion is visible when cropping occurs.*/
+}
+
+section img:hover{
+    transition: transform 0.3s ease; /*Smooth transition effect for image scaling.*/
+    transform: scale(1.1);
+}
+
+section#my-skills{
+    background-color: var(--color-4);
+}
+.cta-button-center{
+    text-align: center;
+    margin-top: 1.5em;
+}
+.grid-container{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr); /*This is a CSS property that is used to create a grid with 4 columns.*/
+    grid-template-rows: repeat(2, minmax(180px, 1fr)); /* Rows can grow so images aren't squashed. */
+    grid-template-areas: 
+    "img-1 img-1 img-2 img-2"
+    "img-3 img-3 img-4 img-4"; /*This is a CSS property that is used to create a grid with 4 areas.*/
+    gap: 1em; /*This is a CSS property that is used to add space between the grid items.*/
+}
+
+.grid-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   /* Show full image without cropping (may add empty space if aspect ratio differs) */
+    object-position: center;
+    border-radius: .5em;
+    transition: 100ms ease;
+}
+.grid-container img:hover{
+    transform: scale(1.1);
+}
+
+section#my-skills a{
+    display: inline-block;
+
+    font-family: 'Merriweather', serif; /*This is a CSS property that is used to set the font family of the first child of the nav element.*/
+    font-weight: bold; /*This is a CSS property that is used to set the font weight of the first child of the nav element.*/
+}
+
+details{
+    margin-top: 1em;
+    background-color: var(--color-4);
+    border-radius: 1em;
+  
+}
+details summary{
+    padding: 1em;
+    font-size: 1.2m;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+  
+}
+details p{
+    padding: 0 2em 2em 2em;
+}
+footer{
+    text-align: center;
+    margin: 1em auto 1em auto;   /* match section spacing above */
+    width: min(75em, 100%);       /* match header and section width */
+    padding: min(2em, 15%);
+    background-color: var(--color-4);
+    border-radius: 1em;
+    box-shadow: 0 8px 32px rgb(0, 0, 0);
+}
+footer p{
+    margin: 0.35em 0;   /* reduce gap between lines/paragraphs */
+}
+footer a:hover{
+    text-decoration: underline;
 }
