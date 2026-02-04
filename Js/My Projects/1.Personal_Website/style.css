@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --text-color: #333;
+    --color-1: #007bff;
+    --color-2: #6c757d;
+    --color-3: #333;
+    --color-4: #fff;
+    --color-5: #f8f9fa;
+    --color-6: #e9ecef;
+    --color-7: #dee2e6;
+    --color-8: #ced4da;
+    --color-9: #adb5bd;
+    --color-10: #6c757d;
+    --color-11: #495057;
+    --color-12: #343a40;
+    --color-13: #212529;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color); /*Here, var(--text-color) is a variable that is defined in the :root selector.*/
+}
+
+body{
+    padding: 1em;
+    background-color: var(--color-5);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+nav{
+    margin: 1em auto 1.5em auto; /* less space below nav before header */
+    width: min(1000px, 100%); /*This is a CSS function that is used to set the width of the nav element to the minimum of 1000px or 100% of the parent element.*/
+}
+
+nav ul{
+    display: flex; /*This is a CSS property that is used to display the list items in a row.*/
+    justify-content: center; /*This is a CSS property that is used to center the list items in the row.*/
+    gap: 1em; /*This is a CSS property that is used to add space between the list items.*/
+    list-style: none; /*This is a CSS property that is used to remove the default list style.*/
+}
+
+nav li:first-child{ /*This is a CSS selector that is used to select the first child of the nav element.*/   
+    margin-right: auto; /*This is a CSS property that is used to add space to the right of the first child of the nav element.*/
+    font-family: 'Merriweather', serif; /*This is a CSS property that is used to set the font family of the first child of the nav element.*/
+    font-weight: bold; /*This is a CSS property that is used to set the font weight of the first child of the nav element.*/
+}
+
+nav a{
+    text-decoration: none; /*This is a CSS property that is used to remove the default text decoration of the anchor tags.*/
+    color: var(--color-13); /*This is a CSS property that is used to set the color of the anchor tags.*/
+}
+
+nav a:hover{
+    text-decoration: underline; /*This is a CSS property that is used to add a underline to the anchor tags when the user hovers over them.*/
+}
+ 
+header, section{ 
+    /*This is a CSS selector that is used to select the header and section elements.*/
+    margin: 1em auto; /* top/bottom: less gap between sections; auto: center horizontally */
+    width: min(75em, 100%); /*This is a CSS function that is used to set the width of the header and section elements to the minimum of 75em or 100% of the parent element.*/
+    background: #f8f9fa; /*Clean, modern soft gray background that's professional and provides excellent contrast with text while being easier on the eyes than pure white.*/
+    padding: min(2em, 15%); /*top right bottom left*/
+    border-radius: 1em; /*This is a CSS property that is used to set the border radius of the header and section elements.*/
+    box-shadow: 0 8px 32px rgb(0, 0, 0); /*Adds a subtle shadow for depth and professional appearance.*/
+}
+.flex-container{
+    display: flex; /*This is a CSS property that is used to display the flex elements side-by-side horizontally.*/
+    justify-content: center; /*This is a CSS property that is used to center the flex elements horizontally.*/
+    align-items: center; /*This is a CSS property that is used to center the flex elements vertically.*/
+    flex-wrap: wrap; /*This is a CSS property that is used to wrap the flex elements when the screen is too small.*/
+    gap: 2em; /*This is a CSS property that is used to add space between the flex elements.*/
+}
+
+header img{
+    max-width: 100%; /*This is a CSS property that is used to set the maximum width of the image to 100% ensures that that the image will never overflow the container.*/
+    border-radius: 1em; /*This is a CSS property that is used to set the border radius of the image.*/
+    object-fit: cover; /*Scales the image to fill the container while maintaining aspect ratio, cropping excess parts if necessary to prevent distortion.*/
+    object-position: bottom; /*Aligns the image to the bottom of the container, ensuring the bottom portion is visible when cropping occurs (useful for portraits to keep faces visible).*/
+   
+}
+header img:hover{
+    transition: transform 0.3s ease; /*Smooth transition effect for image scaling.*/
+    transform: scale(1.1); /*Scales the image to 105% of its original size when hovered over.*/
+}
+.text-container{
+    flex: 0 1 34em; /*Shorthand for flex-grow: 0 (won't grow), flex-shrink: 1 (can shrink), flex-basis: 34em (initial size). Sets the text container to start at 34em width, can shrink if needed, but won't grow beyond that.*/
+}
+
+h1{
+    font-size: 2.5em;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.25em;
+}
+p{
+    margin: .75em 0 1em 0; /*top right bottom left*/
+    font-size: 1em;
+}
+ul{
+    font-size: 1em;
+    line-height: 1.8; /*Improved line spacing for better readability and professional appearance.*/
+    margin: 1em 0 1.5em 0; /*Top and bottom margins for proper spacing around the list.*/
+    padding-left: 1.5em; /*Left padding to accommodate custom bullet styling.*/
+}
+
+ul li{
+    margin-bottom: 0.75em; /*Spacing between list items for better visual separation and readability.*/
+    padding-left: 0.5em; /*Additional padding for list item content.*/
+}
+.button-container{
+    display: flex; /*Flexbox container to arrange buttons in a row.*/
+    flex-wrap: wrap; /*Allows buttons to wrap to next line on very small screens.*/
+    gap: 0.5em; /*Reduced spacing between buttons for a more compact layout.*/
+    margin-top: 1em; /*Top margin to separate from the text above.*/
+}
+
+.cta-button{
+    display: inline-block; /*This is a CSS property that is used to display the button as an inline block element.*/
+    padding: 0.5em 0.9em; /*Reduced padding (vertical 0.5em, horizontal 0.9em) to make buttons more compact so all four fit side by side.*/
+    background-color: var(--primary-color); /*This is a CSS property that is used to set the background color of the button.*/
+    color: var(--color-4); /*This is a CSS property that is used to set the color of the button.*/
+    text-decoration: none; /*This is a CSS property that is used to remove the default text decoration of the button.*/
+    border-radius: 0.4em; /*Slightly smaller border radius to match the reduced button size.*/
+    font-weight: 600; /*Font weight value (no units) - 600 is semi-bold for professional button appearance.*/
+    font-size: 0.9em; /*Slightly smaller font size to make buttons more compact.*/
+    margin: 0; /*Removed margins since gap property handles spacing.*/
+    transition: background-color 0.3s ease; /*Smooth color transition on hover for better user experience.*/
+    white-space: nowrap; /*Prevents button text from wrapping to multiple lines.*/
+}
+.cta-button:hover{
+    background-color: var(--secondary-color); /*This is a CSS property that is used to set the background color of the button when the user hovers over it.*/
+    transition: background-color 0.3s ease; /*Smooth color transition on hover for better user experience.*/
+    transform: scale(1.1); /*Scales the button to 105% of its original size when hovered over.*/
+}
+
+.cta-button i{
+    margin-right: 0.4em; /*Reduced spacing between the icon and the text for a more compact button.*/
+    font-size: 0.95em; /*Slightly smaller icon size to match the reduced button size.*/
+    transition: background-color 0.3s ease; /*Smooth color transition on hover for better user experience.*/
+    transform: scale(1.1); /*Scales the button to 105% of its original size when hovered over.*/
+}
+section{
+    padding: 3em min(2em, 15%); /*top right bottom left*/
+    background: #f8f9fa; /*Clean, modern soft gray background that's professional and provides excellent contrast with text while being easier on the eyes than pure white.*/
+    text-align: justify; /*This is a CSS property that is used to justify the text to the left and right of the container.*/
+}
+section h2{
+    margin-bottom: 1em; /*Bottom margin for spacing below the heading.*/
+}
+
+.content-left{
+    flex: 1; /*Allows the content to take up available space on the left side.*/
+    min-width: 300px; /*Minimum width to ensure readability on smaller screens.*/
+}
+
+.section-image-right{
+    display: block; /*Makes the image a block element.*/
+    max-width: 100%; /*Ensures the image will never overflow the container.*/
+    height: auto; /*Maintains aspect ratio.*/
+    border-radius: 1em; /*Rounded corners for a professional appearance.*/
+    flex-shrink: 0; /*Prevents the image from shrinking below its natural size.*/
+    margin: 0; /*Removes default margins since it's in a flex container.*/
+}
+
+section img{
+    display: block; /*Makes standalone section images block elements.*/
+    margin: 2em auto; /*Centers standalone images horizontally with vertical spacing.*/
+    max-width: 100%; /*This is a CSS property that is used to set the maximum width of the image to 100% ensures that that the image will never overflow the container.*/
+    border-radius: 1em; /*This is a CSS property that is used to set the border radius of the image.*/
+    object-fit: cover; /*Scales the image to fill the container while maintaining aspect ratio, cropping excess parts if necessary to prevent distortion.*/
+    object-position: center; /*Centers the image within the container, ensuring the center portion is visible when cropping occurs.*/
+}
+
+section img:hover{
+    transition: transform 0.3s ease; /*Smooth transition effect for image scaling.*/
+    transform: scale(1.1);
+}
+
+section#my-skills{
+    background-color: var(--color-4);
+}
+.cta-button-center{
+    text-align: center;
+    margin-top: 1.5em;
+}
+.grid-container{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr); /*This is a CSS property that is used to create a grid with 4 columns.*/
+    grid-template-rows: repeat(2, minmax(180px, 1fr)); /* Rows can grow so images aren't squashed. */
+    grid-template-areas: 
+    "img-1 img-1 img-2 img-2"
+    "img-3 img-3 img-4 img-4"; /*This is a CSS property that is used to create a grid with 4 areas.*/
+    gap: 1em; /*This is a CSS property that is used to add space between the grid items.*/
+}
+
+.grid-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   /* Show full image without cropping (may add empty space if aspect ratio differs) */
+    object-position: center;
+    border-radius: .5em;
+    transition: 100ms ease;
+}
+.grid-container img:hover{
+    transform: scale(1.1);
+}
+
+section#my-skills a{
+    display: inline-block;
+
+    font-family: 'Merriweather', serif; /*This is a CSS property that is used to set the font family of the first child of the nav element.*/
+    font-weight: bold; /*This is a CSS property that is used to set the font weight of the first child of the nav element.*/
+}
+
+details{
+    margin-top: 1em;
+    background-color: var(--color-4);
+    border-radius: 1em;
+  
+}
+details summary{
+    padding: 1em;
+    font-size: 1.2m;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+  
+}
+details p{
+    padding: 0 2em 2em 2em;
+}
+footer{
+    text-align: center;
+    margin: 1em auto 1em auto;   /* match section spacing above */
+    width: min(75em, 100%);       /* match header and section width */
+    padding: min(2em, 15%);
+    background-color: var(--color-4);
+    border-radius: 1em;
+    box-shadow: 0 8px 32px rgb(0, 0, 0);
+}
+footer p{
+    margin: 0.35em 0;   /* reduce gap between lines/paragraphs */
+}
+footer a:hover{
+    text-decoration: underline;
+}
