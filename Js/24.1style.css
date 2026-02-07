@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+root{
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --text-color: #333;
+    --color-1: #007bff;
+    --color-2: #6c757d;
+    --color-3: #333;
+    --color-4: #fff;
+    --color-5: #f8f9fa;
+    --color-6: #e9ecef;
+    --color-7: #dee2e6;
+    --color-8: #ced4da;
+    --color-9: #adb5bd;
+}
+body{
+    font-family: merriweather, serif;
+    background-color: var(--color-5);
+}
+h1{
+    font-family: merriweather, serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--color-1);
+}
+
+form{
+    background-color: var(--color-4);
+    text-align: center;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 5px 5px 1em 5px rgba(0, 0, 0, 0.1); 
+    /*0 0 1em 0 = horizontal offset, vertical offset, blur radius, color*/
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+#temperature{
+    font-family: merriweather, serif;
+    width: 50%;
+    text-align: center;
+    padding: 0.5em;
+    border: 1px solid black;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    font-size: 1em;
+}
+
+label{
+    font-family: merriweather, serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--color-1);
+}
+
+button{
+    font-family: merriweather, serif;
+    color: var(--color-4);
+    padding: 0.5em 1em;
+    background-color: hsl(0, 0%, 85%);
+    border: 1px solid var(--color-1);
+    border-radius: 0.5em;
+    margin-top: 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: hsl(0, 0%, 55%);
+    transform: scale(1.1);
+    color: #fff;
+}
+#result{
+    font-family: merriweather, serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
