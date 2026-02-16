@@ -8,5 +8,13 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('my-app');
+  title = '-Standalone Project';
+
+  ngOnInit() {
+    this.changeTitle();
+  }
+  changeTitle() {
+    this.title = ' Just Kidding';
+  }
 }
+
