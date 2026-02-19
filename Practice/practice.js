@@ -55,7 +55,7 @@ function whosPaying(names) {
   var selectedPerson = names[randomIndex];
   return selectedPerson + " is going to buy lunch today.";
 }
-=======
+
 var output = [];
 var count = 1;
 
