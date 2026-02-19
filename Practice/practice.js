@@ -24,6 +24,8 @@ if(input % 3 === 0 && input % 5 === 0){
 }
 */
 
+
+/*
 var output = [];
 var count = 1;
 
@@ -45,7 +47,14 @@ function fizzBuzz() {
 for (var i = 0; i < 100; i++) {
   fizzBuzz();
 }
+*/
 
+var names = ["Angela", "Ben", "Jenny", "Michael", "Chole"];
+function whosPaying(names) {
+  var randomIndex = Math.floor(Math.random() * names.length);
+  var selectedPerson = names[randomIndex];
+  return selectedPerson + " is going to buy lunch today.";
+}
 
 
 
