@@ -25,7 +25,6 @@ if(input % 3 === 0 && input % 5 === 0){
 */
 
 
-
 /*
 var output = [];
 var count = 1;
@@ -50,29 +49,14 @@ for (var i = 0; i < 100; i++) {
 }
 */
 
-/*
-var output = [];
-var count = 1;
-
-function fizzBuzz(){
-  while(count<=100){
-    if(count % 3 === 0 && count % 5 === 0){
-      output.push("FizzBuzz");
-    }else if(count % 5 === 0){
-      output.push("Buzz");
-    }else if(count % 3 === 0){
-      output.push("Fizz");
-    }else {
-      output.push(count);
-    }
-    count++;
-  }
-  console.log(output);
+var names = ["Angela", "Ben", "Jenny", "Michael", "Chole"];
+function whosPaying(names) {
+  var randomIndex = Math.floor(Math.random() * names.length);
+  var selectedPerson = names[randomIndex];
+  return selectedPerson + " is going to buy lunch today.";
 }
-*/
 
- function fibonacciGenerator(n) {
-
+function fibonacciGenerator(n) {
     var output = [];
     
     if (n === 1) {
@@ -91,10 +75,4 @@ function fizzBuzz(){
 }
 fibonacciGenerator(5);
 console.log(output);
-
-
-
-
-
-
 
