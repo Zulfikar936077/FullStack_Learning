@@ -47,3 +47,32 @@ exportImage.addEventListener('click', function(){
   console.log('Export Image button clicked!');
   viz.showExportImageDialog();
 })
+
+//application of the filter to the viz
+function getRangeValue(){
+  //getting value from the input fields
+  const minValue = document.getElementById('minValue').value;
+  const maxValue = document.getElementById('maxValue').value;
+  console.log(minValue, maxValue);
+  //get the workbook object
+  const workbook = viz.getWorkbook();
+  //get the active sheet
+  const activeSheet = workbook.getActiveSheet();
+  //get all the active sheets
+  const sheets = activeSheet.getWorksheets();
+  const sheetToFilter = sheets[1]; //index 1 is the sheet we want to filter
+  sheetToFilter.applyRangeFilterAsync("Sales", {
+    min: minValue,
+    max: maxValue
+  })
+  //after async that return a Promise, we can use then and catch to handle the result
+  .then(function() {
+    console.log('Filter applied successfully!');
+  })
+  .catch(function(error) {
+    console.log('Error applying filter:', error);
+  });
+}
+document.getElementById('applyFilter').addEventListener('click', function(){
+  getRangeValue();
+}) 
