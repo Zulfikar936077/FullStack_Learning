@@ -9,7 +9,7 @@ const url = 'https://public.tableau.com/views/LearnEmbeddedAnalytics/SalesOvervi
 const options = {
   hideTabs: true,
   height: 800,
-  width: 1900,
+  width: 1200,
   device: 'desktop',
   onFirstInteractive: function() {
     console.log('Hey, my dashboard is ready!');
