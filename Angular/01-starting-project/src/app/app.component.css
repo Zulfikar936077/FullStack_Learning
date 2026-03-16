@@ -7,12 +7,6 @@ main {
   gap: 2rem;
 }
 
-main ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 #users {
   list-style: none;
   margin: 0;
@@ -43,4 +37,8 @@ main ul {
     font-size: 1.5rem;
     text-align: left;
   }
+}
+ul {
+  list-style: none;
+  padding-left: 0;
 }

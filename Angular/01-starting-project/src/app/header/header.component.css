@@ -1,3 +1,4 @@
+/* You can add global styles to this file, and also import other style files */
 header {
     display: flex;
     flex-direction: column;
@@ -22,10 +23,7 @@ header {
     width: 3.5rem;
     object-fit: contain;
   }
-  :host {
-    display: block;
-    width: 100%;
-  }
+  
   h1 {
     font-size: 1.25rem;
     margin: 0;

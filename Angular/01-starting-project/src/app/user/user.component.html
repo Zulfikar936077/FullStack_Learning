@@ -1,8 +1,8 @@
+
 <div>
     <button (click)="onSelectUser()">
-      <img [src]="imagePath"
-           [alt] = "selectedUser.name"
-      />  
-      <span>{{ selectedUser.name }}</span>
+        <img [src] ="imagePath" 
+        [alt] = "selectedUser.name"/> <!--property binding for image source-->
+        <span>{{ selectedUser.name }}</span> <!--string interpolation for data binding-->
     </button>
 </div>
