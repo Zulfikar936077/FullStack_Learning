@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { DUMMY_USERS } from '../dummy-users';
 const randomIndex = Math.floor(Math.random()*DUMMY_USERS.length);
 
@@ -10,13 +10,19 @@ const randomIndex = Math.floor(Math.random()*DUMMY_USERS.length);
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  selectedUser = DUMMY_USERS[randomIndex];
-
+  //selectedUser = DUMMY_USERS[randomIndex];  //for zone.js
+  selectedUser = signal(DUMMY_USERS[randomIndex]); //1. initializing signal
+  imagePath = computed(() => `assets/users/${this.selectedUser().avatar}`);  //using computed function as it is going to change with the selectedUser signal and to avoid getter and setter.
+  //getter and setter are used for zone.js
+  /*
   get imagePath() {   //getter is used to get the selected user's avatar path
-    return 'assets/users/' + this.selectedUser.avatar;  // return is used to return the selected folder path
+    return 'assets/users/' + this.selectedUser().avatar;  // return is used to return the selected folder path
   } //this is used as it is using the selectedUser property which is within the same class
+   */
+
   onSelectUser() {
     const randomIndex = Math.floor(Math.random()*DUMMY_USERS.length);
-    this.selectedUser = DUMMY_USERS[randomIndex];
+    //this.selectedUser = DUMMY_USERS[randomIndex];
+    this.selectedUser.set(DUMMY_USERS[randomIndex]); //2. updating signal
   }
 }
