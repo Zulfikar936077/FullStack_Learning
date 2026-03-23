@@ -1,0 +1,15 @@
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\bin\Debug\net8.0\2.Top Level Statements.exe
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\bin\Debug\net8.0\2.Top Level Statements.deps.json
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\bin\Debug\net8.0\2.Top Level Statements.runtimeconfig.json
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\bin\Debug\net8.0\2.Top Level Statements.dll
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\bin\Debug\net8.0\2.Top Level Statements.pdb
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\obj\Debug\net8.0\2.Top Level Statements.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\obj\Debug\net8.0\2.Top Level Statements.AssemblyInfoInputs.cache
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\obj\Debug\net8.0\2.Top Level Statements.AssemblyInfo.cs
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\obj\Debug\net8.0\2.Top Level Statements.csproj.CoreCompileInputs.cache
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\obj\Debug\net8.0\2.Top Level Statements.sourcelink.json
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\obj\Debug\net8.0\2.Top Level Statements.dll
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\obj\Debug\net8.0\refint\2.Top Level Statements.dll
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\obj\Debug\net8.0\2.Top Level Statements.pdb
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\obj\Debug\net8.0\2.Top Level Statements.genruntimeconfig.cache
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\2.Top Level Statements\2.Top Level Statements\obj\Debug\net8.0\ref\2.Top Level Statements.dll

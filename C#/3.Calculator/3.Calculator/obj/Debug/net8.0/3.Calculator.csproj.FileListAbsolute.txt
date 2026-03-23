@@ -1,0 +1,15 @@
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\bin\Debug\net8.0\3.Calculator.exe
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\bin\Debug\net8.0\3.Calculator.deps.json
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\bin\Debug\net8.0\3.Calculator.runtimeconfig.json
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\bin\Debug\net8.0\3.Calculator.dll
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\bin\Debug\net8.0\3.Calculator.pdb
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\obj\Debug\net8.0\3.Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\obj\Debug\net8.0\3.Calculator.AssemblyInfoInputs.cache
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\obj\Debug\net8.0\3.Calculator.AssemblyInfo.cs
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\obj\Debug\net8.0\3.Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\obj\Debug\net8.0\3.Calculator.sourcelink.json
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\obj\Debug\net8.0\3.Calculator.dll
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\obj\Debug\net8.0\refint\3.Calculator.dll
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\obj\Debug\net8.0\3.Calculator.pdb
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\obj\Debug\net8.0\3.Calculator.genruntimeconfig.cache
+C:\Users\Fin\Desktop\Hasan\FullStack_Learning\C#\3.Calculator\3.Calculator\obj\Debug\net8.0\ref\3.Calculator.dll
