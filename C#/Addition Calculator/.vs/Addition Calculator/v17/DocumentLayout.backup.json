@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Fin\\Desktop\\Hasan\\FullStack_Learning\\C#\\Addition Calculator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{61249B66-F47E-4515-838D-E1AD303EFE6E}|Addition Calculator\\Addition Calculator.csproj|c:\\users\\fin\\desktop\\hasan\\fullstack_learning\\c#\\addition calculator\\addition calculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61249B66-F47E-4515-838D-E1AD303EFE6E}|Addition Calculator\\Addition Calculator.csproj|solutionrelative:addition calculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Fin\\Desktop\\Hasan\\FullStack_Learning\\C#\\Addition Calculator\\Addition Calculator\\Program.cs",
+              "RelativeDocumentMoniker": "Addition Calculator\\Program.cs",
+              "ToolTip": "C:\\Users\\Fin\\Desktop\\Hasan\\FullStack_Learning\\C#\\Addition Calculator\\Addition Calculator\\Program.cs",
+              "RelativeToolTip": "Addition Calculator\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T12:50:14.908Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
