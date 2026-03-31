@@ -1,9 +1,8 @@
 
 <div>
     <button (click)="onSelectUser()"> <!--Here, the parenthesis is used as it is the event binding and not a data binding or property binding-->
-        <img [src] ="imagePath" [alt] = "name" /> <!--property binding for image source-->
+        <img [src]="imagePath" [alt]="name" /> <!--@Input: use name, not name()-->
         <span>{{ name }}</span> <!--string interpolation for data binding -->   
-        <span>{{ name }}</span>
 
         <!--Signal Approach:-->
         <!-- <img [src] ="imagePath()" [alt] = "name()" /> --> <!--property binding for image source-->

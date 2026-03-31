@@ -12,4 +12,9 @@ import { DUMMY_USERS } from './dummy-users'; //3. importing dummy users from dum
 })
 export class AppComponent {
   users = DUMMY_USERS; //4. initializing users property with dummy users from dummy-users.ts
+
+  //Declare the onSelectUser function here to use it in the app.component.html file.
+  onSelectUser(id: string) {
+    console.log('Selected user with id: ' + id); //Now move to app.component.html file to handle the event.
+  }
 }
