@@ -1,0 +1,2 @@
+CREATE DATABASE TrainingDB;
+DROP DATABASE TrainingDB;
