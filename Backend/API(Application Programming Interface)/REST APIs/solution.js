@@ -6,11 +6,13 @@ const app = express();
 const port = 3000;
 const API_URL = "https://secrets-api.appbrewery.com";
 
-//Add your own bearer token from the previous lesson.
-const yourBearerToken = "08f3026d-9c6c-4d88-a3b2-c579dc106247";
-const config = {
-  headers: { Authorization: `Bearer ${yourBearerToken}` },
-};
+// Set SECRETS_API_BEARER_TOKEN in your environment before starting the app.
+const yourBearerToken = process.env.SECRETS_API_BEARER_TOKEN;
+const config = yourBearerToken
+  ? {
+      headers: { Authorization: `Bearer ${yourBearerToken}` },
+    }
+  : {};
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
