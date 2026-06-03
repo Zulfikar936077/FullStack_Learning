@@ -1,21 +1,28 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import { fileURLToPath } from "url";
 
 const app = express();
-const port = 3000;
-const API_URL = "https://secrets-api.appbrewery.com";
+const port = process.env.PORT || 3000;
+const API_URL = process.env.SECRETS_API_URL || "https://secrets-api.appbrewery.com";
 
 // HINTs: Use the axios documentation as well as the video lesson to help you.
 // https://axios-http.com/docs/post_example
 // Use the Secrets API documentation to figure out what each route expects and how to work with it.
 // https://secrets-api.appbrewery.com/
 
-//TODO 1: Add your own bearer token from the previous lesson.
-const yourBearerToken = "";
-const config = {
-  headers: { Authorization: `Bearer ${yourBearerToken}` },
-};
+//TODO 1: Set SECRETS_API_BEARER_TOKEN in your environment before running this file.
+const yourBearerToken = process.env.SECRETS_API_BEARER_TOKEN;
+const config = yourBearerToken
+  ? {
+      headers: { Authorization: `Bearer ${yourBearerToken}` },
+    }
+  : {};
+
+function getErrorContent(error) {
+  return JSON.stringify(error?.response?.data ?? { error: error?.message ?? "Unknown error" });
+}
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -29,7 +36,7 @@ app.post("/get-secret", async (req, res) => {
     const result = await axios.get(API_URL + "/secrets/" + searchId, config);
     res.render("index.ejs", { content: JSON.stringify(result.data) });
   } catch (error) {
-    res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+    res.render("index.ejs", { content: getErrorContent(error) });
   }
 });
 
@@ -52,6 +59,10 @@ app.post("/delete-secret", async (req, res) => {
   // TODO 5: Use axios to DELETE the item with searchId from the secrets api servers.
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+export { app };
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+}
