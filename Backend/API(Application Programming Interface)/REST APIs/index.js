@@ -3,8 +3,9 @@ import axios from "axios";
 import bodyParser from "body-parser";
 
 const app = express();
-const port = 3000;
-const API_URL = "https://secrets-api.appbrewery.com";
+const port = process.env.PORT ?? 3000;
+const API_URL =
+  process.env.SECRETS_API_URL ?? "https://secrets-api.appbrewery.com";
 
 // HINTs: Use the axios documentation as well as the video lesson to help you.
 // https://axios-http.com/docs/post_example
@@ -19,6 +20,11 @@ const config = {
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+function renderAxiosError(res, error) {
+  const content = error.response?.data ?? { error: error.message };
+  res.render("index.ejs", { content: JSON.stringify(content) });
+}
+
 app.get("/", (req, res) => {
   res.render("index.ejs", { content: "Waiting for data..." });
 });
@@ -29,7 +35,7 @@ app.post("/get-secret", async (req, res) => {
     const result = await axios.get(API_URL + "/secrets/" + searchId, config);
     res.render("index.ejs", { content: JSON.stringify(result.data) });
   } catch (error) {
-    res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+    renderAxiosError(res, error);
   }
 });
 
