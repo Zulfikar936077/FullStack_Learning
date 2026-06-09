@@ -1,6 +1,7 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import { getErrorContent } from "./apiError.js";
 
 const app = express();
 const port = 3000;
@@ -29,7 +30,7 @@ app.post("/get-secret", async (req, res) => {
     const result = await axios.get(API_URL + "/secrets/" + searchId, config);
     res.render("index.ejs", { content: JSON.stringify(result.data) });
   } catch (error) {
-    res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+    res.render("index.ejs", { content: getErrorContent(error) });
   }
 });
 
