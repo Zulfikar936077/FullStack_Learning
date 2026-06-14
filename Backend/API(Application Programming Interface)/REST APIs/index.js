@@ -1,6 +1,7 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import { pathToFileURL } from "url";
 
 const app = express();
 const port = 3000;
@@ -17,6 +18,16 @@ const config = {
   headers: { Authorization: `Bearer ${yourBearerToken}` },
 };
 
+export function formatAxiosErrorContent(error) {
+  if (error.response && error.response.data) {
+    return JSON.stringify(error.response.data);
+  }
+
+  return JSON.stringify({
+    error: error.message || "Request failed",
+  });
+}
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
@@ -29,7 +40,7 @@ app.post("/get-secret", async (req, res) => {
     const result = await axios.get(API_URL + "/secrets/" + searchId, config);
     res.render("index.ejs", { content: JSON.stringify(result.data) });
   } catch (error) {
-    res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+    res.render("index.ejs", { content: formatAxiosErrorContent(error) });
   }
 });
 
@@ -52,6 +63,10 @@ app.post("/delete-secret", async (req, res) => {
   // TODO 5: Use axios to DELETE the item with searchId from the secrets api servers.
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+}
+
+export default app;
