@@ -113,10 +113,10 @@ test("Secrets project rejects a bad password after a previous successful request
     });
 
     assert.equal(allowed.statusCode, 200);
-    assert.match(allowed.body, /<h1>Secrets<\/h1>/);
+    assert.match(allowed.body, /When making chocolate desserts/);
     assert.equal(denied.statusCode, 200);
-    assert.doesNotMatch(denied.body, /<h1>Secrets<\/h1>/);
-    assert.match(denied.body, /Enter the password/);
+    assert.doesNotMatch(denied.body, /When making chocolate desserts/);
+    assert.match(denied.body, /<form action="\/check" method="POST">/);
   } finally {
     await close(server);
   }
