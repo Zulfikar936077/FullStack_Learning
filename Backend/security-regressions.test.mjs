@@ -79,24 +79,29 @@ test("Secrets API credentials are read from environment variables", async () => 
 });
 
 test("REST API routes render response-less Axios failures instead of crashing", async () => {
-  const { apiClient, app } = await import(
-    "./API(Application Programming Interface)/REST APIs/solution.js"
-  );
-  const originalGet = apiClient.get;
-  apiClient.get = async () => {
-    throw new Error("connect ECONNREFUSED 127.0.0.1:443");
-  };
+  const entrypoints = [
+    "./API(Application Programming Interface)/REST APIs/index.js",
+    "./API(Application Programming Interface)/REST APIs/solution.js",
+  ];
 
-  const server = await listen(app);
+  for (const entrypoint of entrypoints) {
+    const { apiClient, app } = await import(entrypoint);
+    const originalGet = apiClient.get;
+    apiClient.get = async () => {
+      throw new Error("connect ECONNREFUSED 127.0.0.1:443");
+    };
 
-  try {
-    const response = await postForm(server, "/get-secret", { id: "42" });
+    const server = await listen(app);
 
-    assert.equal(response.statusCode, 200);
-    assert.match(response.body, /connect ECONNREFUSED/);
-  } finally {
-    apiClient.get = originalGet;
-    await close(server);
+    try {
+      const response = await postForm(server, "/get-secret", { id: "42" });
+
+      assert.equal(response.statusCode, 200);
+      assert.match(response.body, /connect ECONNREFUSED/);
+    } finally {
+      apiClient.get = originalGet;
+      await close(server);
+    }
   }
 });
 
