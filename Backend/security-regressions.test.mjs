@@ -1,5 +1,4 @@
 import { strict as assert } from "assert";
-import { createRequire } from "module";
 import { readFile } from "fs/promises";
 import http from "http";
 import test from "node:test";
@@ -80,16 +79,14 @@ test("Secrets API credentials are read from environment variables", async () => 
 });
 
 test("REST API routes render response-less Axios failures instead of crashing", async () => {
-  const restRequire = createRequire(
-    new URL("./API(Application Programming Interface)/REST APIs/solution.js", import.meta.url)
+  const { apiClient, app } = await import(
+    "./API(Application Programming Interface)/REST APIs/solution.js"
   );
-  const axios = (await import(restRequire.resolve("axios"))).default;
-  const originalGet = axios.get;
-  axios.get = async () => {
+  const originalGet = apiClient.get;
+  apiClient.get = async () => {
     throw new Error("connect ECONNREFUSED 127.0.0.1:443");
   };
 
-  const { app } = await import("./API(Application Programming Interface)/REST APIs/solution.js");
   const server = await listen(app);
 
   try {
@@ -98,7 +95,7 @@ test("REST API routes render response-less Axios failures instead of crashing", 
     assert.equal(response.statusCode, 200);
     assert.match(response.body, /connect ECONNREFUSED/);
   } finally {
-    axios.get = originalGet;
+    apiClient.get = originalGet;
     await close(server);
   }
 });
