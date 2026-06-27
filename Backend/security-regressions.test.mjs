@@ -100,11 +100,11 @@ test("Secrets API example files do not contain committed credentials", async () 
     ),
   ];
 
-  const exposedCredentialPattern =
-    /hasan|bac77d6-d655-4f5e-883b-fc6bca90ce77|158504fa-13bb-4091-abbf-2e3bce7d2e53|08f3026d-9c6c-4d88-a3b2-c579dc106247/;
-
   for (const file of files) {
     const source = await readFile(file, "utf8");
-    assert.doesNotMatch(source, exposedCredentialPattern);
+    assert.doesNotMatch(source, /const yourUsername = "[^"]+"/);
+    assert.doesNotMatch(source, /const yourPassword = "[^"]+"/);
+    assert.doesNotMatch(source, /const yourAPIKey = "[^"]+"/);
+    assert.doesNotMatch(source, /const yourBearerToken = "[^"]+"/);
   }
 });
