@@ -5,22 +5,17 @@
 import express from "express";
 import bodyParser from "body-parser";
 import { dirname } from "path";
-import { fileURLToPath } from "url";
+import { fileURLToPath, pathToFileURL } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = 3000;
-var userIsAuthorised = false; //define a variable to store the user's authorization status
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 function passwordCheck(req, res, next) {
-  const password = req.body["password"];
-  if (password === "ILoveProgramming") {
-    userIsAuthorised = true;
-  } else {
-    userIsAuthorised = false;
-  }
+  const password = req.body?.password;
+  res.locals.userIsAuthorised = password === "ILoveProgramming";
   next();
 }
 
@@ -31,13 +26,17 @@ app.get("/", (req, res) => {
 });
 
 app.post("/check", (req, res) => {
-  if (userIsAuthorised) {
+  if (res.locals.userIsAuthorised) {
     res.sendFile(__dirname + "/public/secret.html");
   } else {
     res.sendFile(__dirname + "/public/index.html");
   }
 });
 
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
+  });
+}
+
+export { app, passwordCheck };
