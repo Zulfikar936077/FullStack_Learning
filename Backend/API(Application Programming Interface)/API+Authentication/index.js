@@ -1,15 +1,16 @@
 import express from "express";
 import axios from "axios";
+import { pathToFileURL } from "url";
 
 const app = express();
 const port = 3000;
 const API_URL = "https://secrets-api.appbrewery.com/";
 
 //TODO 1: Fill in your values for the 3 types of auth.
-const yourUsername = "hasan";
-const yourPassword = "hasan";
-const yourAPIKey = "bac77d6-d655-4f5e-883b-fc6bca90ce77";
-const yourBearerToken = "158504fa-13bb-4091-abbf-2e3bce7d2e53";
+const yourUsername = process.env.SECRETS_API_USERNAME || "";
+const yourPassword = process.env.SECRETS_API_PASSWORD || "";
+const yourAPIKey = process.env.SECRETS_API_KEY || "";
+const yourBearerToken = process.env.SECRETS_API_BEARER_TOKEN || "";
 
 app.get("/", (req, res) => {
   res.render("index.ejs", { content: "API Response." });
@@ -56,6 +57,10 @@ app.get("/bearerToken", (req, res) => {
   */
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+}
+
+export { app, yourUsername, yourPassword, yourAPIKey, yourBearerToken };
