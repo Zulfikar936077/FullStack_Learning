@@ -12,10 +12,14 @@ const API_URL = "https://secrets-api.appbrewery.com";
 // https://secrets-api.appbrewery.com/
 
 //TODO 1: Add your own bearer token from the previous lesson.
-const yourBearerToken = "";
+const yourBearerToken = process.env.SECRETS_API_BEARER_TOKEN ?? "";
 const config = {
   headers: { Authorization: `Bearer ${yourBearerToken}` },
 };
+
+function formatAxiosError(error) {
+  return JSON.stringify(error.response?.data ?? { error: error.message });
+}
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -29,7 +33,7 @@ app.post("/get-secret", async (req, res) => {
     const result = await axios.get(API_URL + "/secrets/" + searchId, config);
     res.render("index.ejs", { content: JSON.stringify(result.data) });
   } catch (error) {
-    res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+    res.render("index.ejs", { content: formatAxiosError(error) });
   }
 });
 
@@ -52,6 +56,10 @@ app.post("/delete-secret", async (req, res) => {
   // TODO 5: Use axios to DELETE the item with searchId from the secrets api servers.
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+if (process.env.NODE_ENV !== "test") {
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+}
+
+export { app, formatAxiosError };
