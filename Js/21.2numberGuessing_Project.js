@@ -12,10 +12,17 @@ let running = true;
 
 while(running){
     guess = window.prompt(`Enter a guess between ${minNum} and ${maxNum}:`);
+    // prompt returns null when the user clicks Cancel. Check before Number():
+    // Number(null) === 0, which is NOT NaN, so a later isNaN check would miss Cancel
+    // and treat 0 as out-of-range forever (infinite prompt/alert loop).
+    if (guess === null){
+        running = false;
+        break;
+    }
     guess = Number(guess);  // Convert string input to number
     console.log(guess, typeof guess);
 
-    if (isNaN(guess)){  // Not a valid number (e.g. user typed text or clicked Cancel)
+    if (isNaN(guess)){  // Not a valid number (e.g. user typed text)
         window.alert("Please enter a valid number");
         continue;  // Skip rest of loop, ask again
     }
