@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "databricks": {
+      "type": "streamable-http",
+      "url": "${env:DATABRICKS_HOST}/api/2.0/mcp/functions/${env:DATABRICKS_CATALOG}/${env:DATABRICKS_SCHEMA}",
+      "headers": {
+        "Authorization": "Bearer ${env:DATABRICKS_TOKEN}"
+      },
+      "note": "Databricks Unity Catalog MCP via PAT"
+    }
+  }
+}
