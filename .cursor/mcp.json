@@ -1,0 +1,100 @@
+{
+  "mcpServers": {
+    "databricks-functions-pat": {
+      "type": "streamable-http",
+      "url": "${env:DATABRICKS_HOST}/api/2.0/mcp/functions/${env:DATABRICKS_CATALOG}/${env:DATABRICKS_SCHEMA}",
+      "headers": {
+        "Authorization": "Bearer ${env:DATABRICKS_TOKEN}"
+      },
+      "note": "Managed Databricks functions MCP endpoint with PAT auth"
+    },
+    "databricks-sql-pat": {
+      "type": "streamable-http",
+      "url": "${env:DATABRICKS_HOST}/api/2.0/mcp/sql",
+      "headers": {
+        "Authorization": "Bearer ${env:DATABRICKS_TOKEN}"
+      },
+      "note": "Managed Databricks SQL MCP endpoint with PAT auth"
+    },
+    "databricks-genie-pat": {
+      "type": "streamable-http",
+      "url": "${env:DATABRICKS_HOST}/api/2.0/mcp/genie/${env:DATABRICKS_GENIE_SPACE_ID}",
+      "headers": {
+        "Authorization": "Bearer ${env:DATABRICKS_TOKEN}"
+      },
+      "note": "Managed Databricks Genie MCP endpoint with PAT auth"
+    },
+    "databricks-ai-search-pat": {
+      "type": "streamable-http",
+      "url": "${env:DATABRICKS_HOST}/api/2.0/mcp/ai-search/${env:DATABRICKS_CATALOG}/${env:DATABRICKS_SCHEMA}/${env:DATABRICKS_AI_SEARCH_INDEX}",
+      "headers": {
+        "Authorization": "Bearer ${env:DATABRICKS_TOKEN}"
+      },
+      "note": "Managed Databricks AI Search MCP endpoint with PAT auth"
+    },
+    "databricks-functions-oauth": {
+      "type": "streamable-http",
+      "url": "${env:DATABRICKS_HOST}/api/2.0/mcp/functions/${env:DATABRICKS_CATALOG}/${env:DATABRICKS_SCHEMA}",
+      "auth": {
+        "CLIENT_ID": "${env:DATABRICKS_OAUTH_CLIENT_ID}",
+        "CLIENT_SECRET": "${env:DATABRICKS_OAUTH_CLIENT_SECRET}",
+        "scopes": [
+          "unity-catalog",
+          "offline_access"
+        ]
+      },
+      "note": "Managed Databricks functions MCP endpoint with OAuth"
+    },
+    "databricks-sql-oauth": {
+      "type": "streamable-http",
+      "url": "${env:DATABRICKS_HOST}/api/2.0/mcp/sql",
+      "auth": {
+        "CLIENT_ID": "${env:DATABRICKS_OAUTH_CLIENT_ID}",
+        "CLIENT_SECRET": "${env:DATABRICKS_OAUTH_CLIENT_SECRET}",
+        "scopes": [
+          "sql",
+          "offline_access"
+        ]
+      },
+      "note": "Managed Databricks SQL MCP endpoint with OAuth"
+    },
+    "databricks-genie-oauth": {
+      "type": "streamable-http",
+      "url": "${env:DATABRICKS_HOST}/api/2.0/mcp/genie/${env:DATABRICKS_GENIE_SPACE_ID}",
+      "auth": {
+        "CLIENT_ID": "${env:DATABRICKS_OAUTH_CLIENT_ID}",
+        "CLIENT_SECRET": "${env:DATABRICKS_OAUTH_CLIENT_SECRET}",
+        "scopes": [
+          "genie",
+          "offline_access"
+        ]
+      },
+      "note": "Managed Databricks Genie MCP endpoint with OAuth"
+    },
+    "databricks-ai-search-oauth": {
+      "type": "streamable-http",
+      "url": "${env:DATABRICKS_HOST}/api/2.0/mcp/ai-search/${env:DATABRICKS_CATALOG}/${env:DATABRICKS_SCHEMA}/${env:DATABRICKS_AI_SEARCH_INDEX}",
+      "auth": {
+        "CLIENT_ID": "${env:DATABRICKS_OAUTH_CLIENT_ID}",
+        "CLIENT_SECRET": "${env:DATABRICKS_OAUTH_CLIENT_SECRET}",
+        "scopes": [
+          "ai-search",
+          "offline_access"
+        ]
+      },
+      "note": "Managed Databricks AI Search MCP endpoint with OAuth"
+    },
+    "databricks-mcp-local": {
+      "command": "uvx",
+      "args": [
+        "databricks-mcp-server@latest"
+      ],
+      "env": {
+        "DATABRICKS_HOST": "${env:DATABRICKS_HOST}",
+        "DATABRICKS_TOKEN": "${env:DATABRICKS_TOKEN}",
+        "DATABRICKS_WAREHOUSE_ID": "${env:DATABRICKS_WAREHOUSE_ID}",
+        "RUNNING_VIA_CURSOR_MCP": "true"
+      }
+    }
+  }
+}
